@@ -491,17 +491,17 @@ nav a.active {
     border-radius: 15px;
 }
 
+.career-intro h2 {
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
 
 .career-item h3 {
     color: #a53b67;
 
     margin-bottom: 8px;
-}
-
-.career-intro h2 {
-    font-size: 36px;
-
-    margin-bottom: 20px;
 }
 
 .career-item p {
