@@ -1,0 +1,849 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    line-height: 1.7;
+
+    color: #2d2630;
+
+    background: #fffafd;
+
+    transition: 0.3s;
+}
+
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: white;
+
+    border-bottom: 1px solid #eadce3;
+}
+
+
+.header-content {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    color: #29232f;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+    color: #c34d7b;
+}
+
+
+/* =========================
+   NAVIGASI
+========================= */
+
+nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+    color: #4d4550;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover,
+nav a.active {
+    color: #c34d7b;
+}
+
+
+/* =========================
+   MODE BUTTON
+========================= */
+
+#modeButton {
+    border: none;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    background: #f4d5e1;
+
+    color: #8f3159;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 90px 0;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #f8e3ed
+    );
+}
+
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.label {
+    color: #c34d7b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero h1 {
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 span {
+    color: #c34d7b;
+}
+
+
+.intro {
+    color: #625863;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    background: #c34d7b;
+
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.button:hover {
+    background: #a83d67;
+}
+
+
+/* =========================
+   FOTO ARTIS
+========================= */
+
+.artist-card {
+    min-height: 400px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #eadce3;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 35px rgba(80, 40, 60, 0.1);
+}
+
+
+.artist-photo {
+    width: 240px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 80px 0;
+}
+
+
+.section h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BERANDA CARD
+========================= */
+
+.welcome-text {
+    max-width: 800px;
+
+    color: #5d555f;
+
+    margin-bottom: 35px;
+}
+
+
+.home-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.home-card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #eadce3;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: #2d2630;
+
+    transition: 0.3s;
+}
+
+
+.home-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(80, 40, 60, 0.1);
+}
+
+
+.home-card h3 {
+    color: #c34d7b;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   HEADER HALAMAN
+========================= */
+
+.page-header {
+    padding: 70px 0;
+
+    background: #fff0f6;
+}
+
+
+.page-header h1 {
+    font-size: 50px;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+
+.page-header p:not(.label) {
+    color: #625863;
+}
+
+
+/* =========================
+   PROFIL
+========================= */
+
+.profile-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.profile-image img {
+    width: 100%;
+
+    max-width: 380px;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+
+    margin: auto;
+}
+
+
+.profile-content p {
+    color: #5d555f;
+
+    margin-bottom: 18px;
+}
+
+
+.soft {
+    background: #faf1f5;
+}
+
+
+.info-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.info-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #eadce3;
+
+    border-radius: 15px;
+}
+
+
+.info-card h3 {
+    color: #a53b67;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   KARIER
+========================= */
+
+.career-intro {
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.career-photo {
+    width: 300px;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+.career-intro p {
+    color: #5d555f;
+
+    margin-bottom: 15px;
+}
+
+
+.career-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.career-item {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #eadce3;
+
+    border-radius: 15px;
+}
+
+
+.career-item h3 {
+    color: #a53b67;
+
+    margin-bottom: 8px;
+}
+
+
+.career-item p {
+    color: #5d555f;
+}
+
+
+/* =========================
+   ARTIKEL
+========================= */
+
+.article-container {
+    max-width: 900px;
+}
+
+
+.article-card {
+    padding: 40px;
+
+    background: white;
+
+    border: 1px solid #eadce3;
+
+    border-radius: 18px;
+}
+
+
+.article-photo {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.article-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.article-card h3 {
+    color: #a53b67;
+
+    margin: 25px 0 8px;
+}
+
+
+.article-card p {
+    color: #5d555f;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   KOMENTAR
+========================= */
+
+.comment-box {
+    margin-top: 40px;
+
+    padding: 30px;
+
+    background: #fff2f7;
+
+    border-radius: 15px;
+}
+
+
+.comment-box h2 {
+    font-size: 30px;
+}
+
+
+form {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+}
+
+
+label {
+    display: block;
+
+    margin: 12px 0 5px;
+
+    font-weight: bold;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d9cbd3;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+form .button {
+    margin-top: 15px;
+}
+
+
+#commentResult {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 0;
+
+    background: #29232f;
+
+    color: white;
+}
+
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+footer p {
+    color: #d6cbd2;
+}
+
+
+/* =========================
+   MODE GELAP
+========================= */
+
+body.dark {
+    color: #f4edf2;
+
+    background: #211c22;
+}
+
+
+body.dark header {
+    background: #29232b;
+
+    border-color: #413740;
+}
+
+
+body.dark .logo {
+    color: white;
+}
+
+
+body.dark nav a {
+    color: #eee5eb;
+}
+
+
+body.dark .hero {
+    background: #30262e;
+}
+
+
+body.dark .page-header {
+    background: #30262e;
+}
+
+
+body.dark .artist-card,
+body.dark .home-card,
+body.dark .info-card,
+body.dark .career-item,
+body.dark .article-card,
+body.dark form,
+body.dark #commentResult {
+    background: #2c262e;
+
+    border-color: #443a43;
+}
+
+
+body.dark .welcome-text,
+body.dark .profile-content p,
+body.dark .career-intro p,
+body.dark .career-item p,
+body.dark .article-card p {
+    color: #d2c6ce;
+}
+
+
+body.dark .soft,
+body.dark .comment-box {
+    background: #272127;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+
+        padding: 15px 0;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 14px;
+    }
+
+
+    .hero {
+        padding: 60px 0;
+    }
+
+
+    .hero-content,
+    .profile-layout,
+    .career-intro {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home-cards,
+    .info-cards,
+    .career-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+
+    .artist-photo {
+        width: 200px;
+
+        height: 270px;
+    }
+
+
+    .career-photo {
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: auto;
+    }
+
+
+    .profile-image img {
+        max-width: 350px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    #modeButton {
+        font-size: 12px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .section {
+        padding: 60px 0;
+    }
+
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+
+    .article-card,
+    .comment-box {
+        padding: 22px;
+    }
+
+
+    .article-photo {
+        height: 280px;
+    }
+
+}
