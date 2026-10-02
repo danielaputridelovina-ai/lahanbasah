@@ -454,9 +454,13 @@ nav a.active {
 
     height: 380px;
 
+    max-width: 100%;
+
     object-fit: cover;
 
     border-radius: 20px;
+
+    display: block;
 }
 
 
@@ -494,9 +498,18 @@ nav a.active {
     margin-bottom: 8px;
 }
 
+.career-intro h2 {
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
 
 .career-item p {
     color: #5d555f;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
 }
 
 
